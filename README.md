@@ -7,7 +7,7 @@ Go to portal.azure.com, create an account (I'm using free one), give your accoun
 Select create a resource, select web app. <br>
 Subscription: Free trial <br>
 Resource group: any name <br>
-Name: &lt;<your-website-name>&gt;.azurewebsites.net <br>
+Name: &lt;<&gt;your-website-name&lt;>&gt;.azurewebsites.net <br>
 Publish: Code/Docker Container<br>
 Runtime Stack: the version of your language or framework<br>
 OS: Windows<br>
