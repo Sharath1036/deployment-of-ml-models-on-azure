@@ -1,31 +1,75 @@
-# Deployment of ML models on Azure
+# Deploying Machine Learning Models on Azure
 
-Commit all the code on GitHub
+This guide outlines the step-by-step process to deploy your ML models on Azure using a free account.
 
-Go to portal.azure.com, create an account (I'm using free one), give your account details and Rs. 2 will be deducted
+---
 
-Select create a resource, select web app. <br>
-Subscription: Free trial <br>
-Resource group: any name <br>
-Name: &lt;<&gt;your-website-name&lt;>&gt;.azurewebsites.net <br>
-Publish: Code/Docker Container<br>
-Runtime Stack: the version of your language or framework<br>
-OS: Windows<br>
-Region: us-east-2 (for Salk AI)<br>
-SKU and Size: Free F1<br>
+## Prerequisites
 
-Click on Review + Create (Will take some time)<br>
-CLick create<br>
-Go to tags and click on Review Plus create and it will get created, will take some (5-6 min) time saying deployment is underway<br>
+1. Code committed to a GitHub repository.
+2. An active Azure account (free trial can be used).
 
-After deployment is complete, click on go to resources<br>
-Select deployment center<br>
-Source control: Github<br>
-Build provider: App service build service<br>
-Configure:<br>
-  Organization: Github username<br>
-  Repository: <your-github-repo><br>
-  Branch: Master<br>
-Then click continue, the finish and deployment will start (will take 5-10 mins, slower than AWS, GCloud)
+---
 
-Then click on your deployment, you can toggle through various options such as deployment center, app logs, overview
+## Steps for Deployment
+
+### 1. Create an Azure Account
+- Go to [portal.azure.com](https://portal.azure.com).
+- Create an account. A nominal amount of ₹2 will be deducted for account verification.
+
+---
+
+### 2. Create a Web App
+1. **Navigate to:**  
+   - Click **Create a resource** > **Web App**.
+   
+2. **Fill the required fields:**
+   - **Subscription:** Free trial  
+   - **Resource group:** Any name of your choice  
+   - **Name:** `<your-website-name>.azurewebsites.net`  
+   - **Publish:** Code/Docker Container  
+   - **Runtime Stack:** Choose the version of your language/framework  
+   - **OS:** Windows  
+   - **Region:** Select a suitable region, e.g., `US East 2`  
+   - **SKU and Size:** Free F1  
+
+3. **Complete the creation:**
+   - Click **Review + Create** and then **Create**.  
+   - This will take **5–6 minutes** to complete the deployment.
+
+4. **Post Deployment:**
+   - After deployment, click **Go to resource**.
+
+---
+
+### 3. Configure Deployment Center
+1. **Open Deployment Center:**
+   - In the resource overview, navigate to **Deployment Center**.
+
+2. **Configure source control:**
+   - **Source control:** GitHub  
+   - **Build provider:** App Service Build Service  
+   - **Configure details:**  
+     - **Organization:** Your GitHub username  
+     - **Repository:** Select your GitHub repository  
+     - **Branch:** Main (or the branch you want to deploy)  
+
+3. **Finalize the setup:**
+   - Click **Continue**, then **Finish**. Deployment will start.  
+   - The deployment process may take **5–10 minutes**.
+
+---
+
+### 4. Access and Manage the Web App
+- After deployment:
+  - Access the deployed web app by visiting the URL `<your-website-name>.azurewebsites.net`.
+  - Toggle through various options in the Azure portal:
+    - **Deployment Center**
+    - **App Logs**
+    - **Overview**
+
+---
+
+## Notes
+- Azure deployments may take longer compared to AWS or GCP.
+- Ensure that all dependencies for your ML model are correctly listed in your project configuration (e.g., `requirements.txt` for Python projects).
